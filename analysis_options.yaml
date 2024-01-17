@@ -1,0 +1,12 @@
+include: package:flutter_lints/flutter.yaml
+
+linter:
+  rules:
+    sort_constructors_first: true
+    prefer_relative_imports: true
+    prefer_single_quotes: true
+    cancel_subscriptions: true
+    close_sinks: true
+    always_declare_return_types: true
+    file_names: true
+    lines_longer_than_80_chars: true
