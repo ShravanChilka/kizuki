@@ -16,6 +16,12 @@ class Application extends StatelessWidget {
       routerConfig: ApplicationRouter.router,
       routeInformationParser: ApplicationRouter.router.routeInformationParser,
       routerDelegate: ApplicationRouter.router.routerDelegate,
+      theme: ThemeData.dark(
+        useMaterial3: true,
+      ),
+      darkTheme: ThemeData.dark(
+        useMaterial3: true,
+      ),
     );
   }
 }
