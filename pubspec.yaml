@@ -12,14 +12,41 @@ dependencies:
   flutter:
     sdk: flutter
 
-  cupertino_icons: ^1.0.2
+  # Authentication
+  firebase_core: ^2.24.2
+  google_sign_in: ^6.2.1
+  firebase_auth: ^4.17.2
+  sign_in_with_apple: ^5.0.0
+  crypto: ^3.0.3
+  # Remote Storage
+  cloud_firestore: ^4.15.2
+  firebase_ui_firestore: ^1.6.1
+  # State
+  provider: ^6.1.1
+  # Router
   go_router: ^13.0.1
+  # External
+  cupertino_icons: ^1.0.2
+  google_fonts: ^6.1.0
+  flutter_svg: ^2.0.9
+  shimmer: ^3.0.0
+  cached_network_image: ^3.3.1
+  firebase_storage: ^11.6.5
+  firebase_app_check: ^0.2.1+13
+  get_it: ^7.6.7
+  http: ^1.2.0
+  path: ^1.8.3
+  path_provider: ^2.1.2
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
-  flutter_lints: ^2.0.0
+  flutter_lints: ^3.0.1
 
 flutter:
   uses-material-design: true
+
+  assets:
+    - assets/
+    - assets/icons/

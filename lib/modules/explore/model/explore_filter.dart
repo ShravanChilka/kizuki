@@ -1,0 +1,5 @@
+enum ExploreFilter {
+  latest,
+  forYou,
+  ;
+}
