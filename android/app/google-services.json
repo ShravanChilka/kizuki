@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "401245033042",
+    "project_id": "kizuki-walls",
+    "storage_bucket": "kizuki-walls.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:401245033042:android:1dc2c00fbf23ba94a2858b",
+        "android_client_info": {
+          "package_name": "com.kizuki.kizuki"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "401245033042-thobkolbc07eb32660t2185eb6kglki4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.kizuki.kizuki",
+            "certificate_hash": "fb273ccd6a43fed29b5c45bc6bfd48a3b60df9fc"
+          }
+        },
+        {
+          "client_id": "401245033042-fm4abc8kto14987f7ljvtqkgpa6pp6uo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAZ4A2aBAepSFHSGZaCpeKtDUb79MBDA3c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "401245033042-fm4abc8kto14987f7ljvtqkgpa6pp6uo.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "401245033042-16nr12hosa57qsl0l0og9l0tk22om36n.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.kizuki.kizuki.RunnerTests"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
