@@ -5,6 +5,8 @@ import 'package:google_fonts/google_fonts.dart';
 
 import '../../gradient_border/gradient_border.dart';
 
+enum _ButtonType { text, icon }
+
 const _linearGradient = LinearGradient(
   transform: GradientRotation(147 * pi / 180),
   begin: Alignment.bottomRight,
@@ -26,13 +28,23 @@ const _glassGradient = LinearGradient(
 
 class SecondaryButton extends StatelessWidget {
   const SecondaryButton({
-    Key? key,
+    super.key,
     required this.title,
     this.onTap,
-  }) : super(key: key);
+  })  : _buttonType = _ButtonType.text,
+        icon = null;
+
+  const SecondaryButton.icon({
+    super.key,
+    required this.title,
+    required this.icon,
+    this.onTap,
+  }) : _buttonType = _ButtonType.icon;
 
   final String title;
   final VoidCallback? onTap;
+  final _ButtonType _buttonType;
+  final Widget? icon;
 
   @override
   Widget build(BuildContext context) {
@@ -52,13 +64,23 @@ class SecondaryButton extends StatelessWidget {
           vertical: 10,
           horizontal: 12,
         ),
-        child: Text(
-          title,
-          style: GoogleFonts.inter(
-            color: const Color(0xFFE5E5E5),
-            fontSize: 9.789,
-            fontWeight: FontWeight.w500,
-          ),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            if (_buttonType == _ButtonType.icon)
+              Padding(
+                padding: const EdgeInsets.only(right: 12),
+                child: icon ?? const SizedBox.shrink(),
+              ),
+            Text(
+              title,
+              style: GoogleFonts.inter(
+                color: const Color(0xFFE5E5E5),
+                fontSize: 9.789,
+                fontWeight: FontWeight.w500,
+              ),
+            ),
+          ],
         ),
       ),
     );

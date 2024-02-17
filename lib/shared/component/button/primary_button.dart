@@ -1,15 +1,27 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+enum _ButtonType { text, icon }
+
 class PrimaryButton extends StatelessWidget {
   const PrimaryButton({
-    Key? key,
+    super.key,
     required this.title,
-    required this.onTap,
-  }) : super(key: key);
+    this.onTap,
+  })  : _buttonType = _ButtonType.text,
+        icon = null;
 
-  final VoidCallback onTap;
+  const PrimaryButton.icon({
+    super.key,
+    required this.title,
+    required this.icon,
+    this.onTap,
+  }) : _buttonType = _ButtonType.icon;
+
+  final VoidCallback? onTap;
   final String title;
+  final _ButtonType _buttonType;
+  final Widget? icon;
 
   @override
   Widget build(BuildContext context) {
@@ -25,13 +37,22 @@ class PrimaryButton extends StatelessWidget {
           vertical: 10,
           horizontal: 12,
         ),
-        child: Text(
-          title,
-          style: GoogleFonts.inter(
-            color: const Color(0xFFE5E5E5),
-            fontSize: 9.789,
-            fontWeight: FontWeight.w500,
-          ),
+        child: Row(
+          children: [
+            if (_buttonType == _ButtonType.icon)
+              Padding(
+                padding: const EdgeInsets.only(right: 12),
+                child: icon ?? const SizedBox.shrink(),
+              ),
+            Text(
+              title,
+              style: GoogleFonts.inter(
+                color: const Color(0xFFE5E5E5),
+                fontSize: 9.789,
+                fontWeight: FontWeight.w500,
+              ),
+            ),
+          ],
         ),
       ),
     );

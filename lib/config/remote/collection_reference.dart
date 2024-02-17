@@ -1,6 +1,8 @@
 class FirestoreCollectionReference {
   static const categories = 'categories';
+  static const userData = 'userData';
   static const wallpapers = 'wallpapers';
+  static const favourites = 'favourites';
 }
 
 class WallpaperImageRef {

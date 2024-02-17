@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import 'config/di/injector.dart';
-import 'modules/auth/view_model/auth_view_model.dart';
-import 'modules/home/view_model/home_view_model.dart';
+import 'features/auth/view_model/auth_view_model.dart';
+import 'features/home/view_model/home_view_model.dart';
 
 class GlobalProvider extends StatelessWidget {
   const GlobalProvider({

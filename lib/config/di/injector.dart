@@ -4,13 +4,13 @@ import 'package:firebase_storage/firebase_storage.dart';
 import 'package:get_it/get_it.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
-import '../../modules/auth/service/auth_remote_service.dart';
-import '../../modules/auth/view_model/auth_view_model.dart';
-import '../../modules/category/service/category_remote_service.dart';
-import '../../modules/explore/service/explore_remote_service.dart';
-import '../../modules/home/view_model/home_view_model.dart';
-import '../../modules/protected_image/service/protected_image_remote_service.dart';
-import '../../modules/wallpaper/service/wallpaper_remote_service.dart';
+import '../../features/auth/service/auth_remote_service.dart';
+import '../../features/auth/view_model/auth_view_model.dart';
+import '../../features/category/category/service/category_remote_service.dart';
+import '../../features/explore/service/explore_remote_service.dart';
+import '../../features/home/view_model/home_view_model.dart';
+import '../../features/storage_image/service/storage_image_remote_service.dart';
+import '../../features/wallpaper/service/wallpaper_remote_service.dart';
 
 final GetIt injecter = GetIt.instance;
 
@@ -47,8 +47,8 @@ Future<void> init() async {
       firestore: injecter.get(),
     ),
   );
-  injecter.registerLazySingleton<ProtectedImageRemoteService>(
-    () => ProtectedImageRemoteServiceImpl(
+  injecter.registerLazySingleton<StorageImageRemoteService>(
+    () => StorageImageRemoteServiceImpl(
       storage: injecter.get(),
     ),
   );
